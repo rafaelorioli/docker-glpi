@@ -1,0 +1,2 @@
+*/1 * * * * root /usr/bin/php5.6 /var/www/html/glpi/front/cron.php --force mailgate queuednotification &>/dev/null
+
