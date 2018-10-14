@@ -1,6 +1,8 @@
 # docker-glpi
 Not official GLPI image
 
+[![https://i.imgur.com/xNcs3Pm.png]]()
+
 ### Build
 ```
 git clone https://github.com/gmdutra/docker-glpi
@@ -20,9 +22,16 @@ rm -rf glpi-9.3.tgz
 docker run -d -p 3000:80 -v $PWD/glpi:/var/www/html/glpi gmdutra/glpi
 ```
 
-### Contact
+### Developers
 ```
+Gabriel Dutra
 [+]Email: gabrieldmdutra@gmail.com
 [+]Linkedin: linkedin.com/in/gmdutra/
 [+]Telegram: @gmdutra
+
+João Freire
+[+]Linkedin: linkedin.com/in/joaopaulocunhafreire
+[+]Telegram: @P0ssuidao
 ```
+
+
