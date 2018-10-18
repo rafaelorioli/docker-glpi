@@ -23,7 +23,7 @@ rm -rf glpi-9.3.tgz
 docker run -d -p 3000:80 -v $PWD/glpi:/var/www/html/glpi gmdutra/glpi
 ```
 
-### Developers - XL Solutions
+### Developers
 ```
 Gabriel Dutra
 [+]Email: gabrieldmdutra@gmail.com
