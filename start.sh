@@ -4,7 +4,9 @@ mkdir /var/www/html/glpi
 GLPI_DIR="${APACHE_DIR}/glpi"
 GLPI_SOURCE_URL=${GLPI_SOURCE_URL:-"https://github.com/glpi-project/glpi/releases/download/9.3.0/glpi-9.3.tgz"}
 
+#Dar permissao para o apache
 chown -R www-data $GLPI_DIR
+#VHOST 
 VHOST=/etc/apache2/sites-enabled/000-default.conf
 
 sed -i -- 's/DocumentRoot .*/DocumentRoot \/var\/www\/html\/glpi/g' $VHOST
@@ -19,6 +21,7 @@ awk '/<\/VirtualHost>/{print "</Directory>" RS $0;next}1' $VHOST > tmp && mv tmp
 
 chown www-data .
 
+#Reiniciar o apache
 service apache2 restart
 
 tail -f /var/log/apache2/error.log -f /var/log/apache2/access.log
